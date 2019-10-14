@@ -8,9 +8,11 @@ package:
 source:
   url: https://github.com/colcon/{{ name }}/archive/{{ version }}.tar.gz
   sha256: c8679b59985dfdca2c0707f4f58313013bc2ef52e9ec8c101e285b431c490d15
+  patches:
+    - pypiwin32.dist.patch
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
   skip: True  # [py<35 or osx or unix]
 
