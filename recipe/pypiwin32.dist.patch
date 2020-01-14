@@ -1,5 +1,5 @@
 --- setup.cfg
-+++ setup - Copy.cfg
++++ setup.cfg
 @@ -25,13 +25,13 @@
  keywords = colcon
  
@@ -11,7 +11,7 @@
 +  pywin32; sys_platform == 'win32'
  packages = find:
  tests_require =
-   flake8
+   flake8>=3.6.0
    flake8-blind-except
    flake8-builtins
    flake8-class-newline
