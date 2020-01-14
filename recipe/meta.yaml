@@ -8,8 +8,6 @@ package:
 source:
   url: https://github.com/colcon/{{ name }}/archive/{{ version }}.tar.gz
   sha256: 256cd8260762bca8ac7c89f7a9e5a6799c7b12128accf4f8aa0a837edbe0db73
-  patches:
-    - pypiwin32.dist.patch
 
 build:
   number: 0
