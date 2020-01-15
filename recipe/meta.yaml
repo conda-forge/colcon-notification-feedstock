@@ -1,5 +1,5 @@
 {% set name = "colcon-notification" %}
-{% set version = "0.2.11" %}
+{% set version = "0.2.12" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,9 +7,7 @@ package:
 
 source:
   url: https://github.com/colcon/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 5c1bd81ff4e16c5092df8457fec053b19ee01691ff47f44f7fd21170c2d011fe
-  patches:
-    - pypiwin32.dist.patch
+  sha256: 256cd8260762bca8ac7c89f7a9e5a6799c7b12128accf4f8aa0a837edbe0db73
 
 build:
   number: 0
