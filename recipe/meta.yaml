@@ -1,18 +1,18 @@
 {% set name = "colcon-notification" %}
-{% set version = "0.2.12" %}
+{% set version = "0.2.13" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://github.com/colcon/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 256cd8260762bca8ac7c89f7a9e5a6799c7b12128accf4f8aa0a837edbe0db73
+  sha256: c295039594812624056369fb85bf8a4a4f2d92666800259b07b112eb3c10ef43
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
-  skip: True  # [py<35 or osx or unix]
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
+  skip: true  # [py<35 or osx or unix]
 
 requirements:
   host:
