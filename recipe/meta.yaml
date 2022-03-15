@@ -18,7 +18,6 @@ requirements:
   host:
     - pip
     - python
-    - stdeb
   run:
     - colcon-core >=0.3.7
     - notify2  # [linux]
