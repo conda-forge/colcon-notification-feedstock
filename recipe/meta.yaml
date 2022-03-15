@@ -35,7 +35,7 @@ test:
 about:
   home: https://colcon.readthedocs.io
   summary: Extension for colcon to provide status notifications.
-  license: Apache License 2.0
+  license: Apache-2.0 
   license_file: LICENSE
 
 extra:
