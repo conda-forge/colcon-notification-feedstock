@@ -6,35 +6,40 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/colcon/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: c295039594812624056369fb85bf8a4a4f2d92666800259b07b112eb3c10ef43
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/colcon-notification-{{ version }}.tar.gz
+  sha256: 6aae1ffe73ae956bcb36e330822cd230a2a88c9181b3170aafd1a446638e69b3
 
 build:
-  number: 2
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py<35 or osx or unix]
+  number: 3 
+
 
 requirements:
   host:
     - pip
     - python
   run:
-    - python
     - colcon-core >=0.3.7
+    - notify2  # [linux]
+    - python
     - pywin32  # [win]
 
 test:
   imports:
-    - {{ name.replace("-", "_") }}
+    - colcon_notification
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
-  home: https://github.com/colcon/{{ name }}
-  license: Apache-2.0
+  home: https://colcon.readthedocs.io
+  summary: Extension for colcon to provide status notifications.
+  license: Apache-2.0 
   license_file: LICENSE
-  summary: |
-    An extension for colcon-core to provide status notifications.
 
 extra:
   recipe-maintainers:
     - seanyen
     - wolfv
+    - ruben-arts
