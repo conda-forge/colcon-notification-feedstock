@@ -1,5 +1,5 @@
 {% set name = "colcon-notification" %}
-{% set version = "0.2.13" %}
+{% set version = "0.2.14" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/colcon-notification-{{ version }}.tar.gz
-  sha256: 6aae1ffe73ae956bcb36e330822cd230a2a88c9181b3170aafd1a446638e69b3
+  sha256: 015fad960062445dcdb04f8843380845c4c11add74d5281ac1c939766edac0f3
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 3 
+  number: 0
 
 
 requirements:
@@ -35,7 +35,7 @@ test:
 about:
   home: https://colcon.readthedocs.io
   summary: Extension for colcon to provide status notifications.
-  license: Apache-2.0 
+  license: Apache-2.0
   license_file: LICENSE
 
 extra:
