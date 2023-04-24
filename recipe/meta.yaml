@@ -1,5 +1,5 @@
 {% set name = "colcon-notification" %}
-{% set version = "0.2.14" %}
+{% set version = "0.2.15" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/colcon-notification-{{ version }}.tar.gz
-  sha256: 015fad960062445dcdb04f8843380845c4c11add74d5281ac1c939766edac0f3
+  sha256: 0a188a4debaa103f1fc620babb6f82a90032f01c559090ac51a5ff4cad326550
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 
 requirements:
