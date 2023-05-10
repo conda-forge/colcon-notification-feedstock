@@ -15,6 +15,8 @@ build:
 
 
 requirements:
+  build:
+    - python  # [build_platform != target_platform]
   host:
     - pip
     - python
@@ -43,3 +45,4 @@ extra:
     - seanyen
     - wolfv
     - ruben-arts
+    - Tobias-Fischer
