@@ -31,7 +31,7 @@ test:
   imports:
     - colcon_notification
   commands:
-    - pip check  # python_impl != "pypy"
+    - pip check  # [python_impl != "pypy"]
   requires:
     - pip
 
