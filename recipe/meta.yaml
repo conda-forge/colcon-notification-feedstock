@@ -11,7 +11,7 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 3
 
 
 requirements:
@@ -30,10 +30,10 @@ requirements:
 test:
   imports:
     - colcon_notification
-  commands:
-    - pip check
-  requires:
-    - pip
+  commands:      # [python_impl == "cpython"]
+    - pip check  # [python_impl == "cpython"]
+  requires:      # [python_impl == "cpython"]
+    - pip        # [python_impl == "cpython"]
 
 about:
   home: https://colcon.readthedocs.io
