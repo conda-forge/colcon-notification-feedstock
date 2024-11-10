@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/colcon-notification-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/colcon-notification-{{ version }}.tar.gz
   sha256: c45b898073a8e98c4518333b7587f9ea49ac1bc129a7bc4e1390059057031fb8
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 
 requirements:
@@ -21,6 +21,7 @@ requirements:
   host:
     - pip
     - python
+    - setuptools
   run:
     - colcon-core >=0.3.7
     - notify2  # [linux]
