@@ -1,17 +1,17 @@
 context:
   name: colcon-notification
-  version: 0.3.0
+  version: "0.3.1"
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/colcon-notification-${{ version }}.tar.gz
-  sha256: c45b898073a8e98c4518333b7587f9ea49ac1bc129a7bc4e1390059057031fb8
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  sha256: cffd62024d8f5a7f742b0c191a44c967a479f936ddb12934abd69c0cf624e136
 
 build:
-  number: 3
+  number: 0
   script: ${{ PYTHON }} -m pip install . -vv
 
 requirements:
