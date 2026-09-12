@@ -1,6 +1,6 @@
 context:
   name: colcon-notification
-  version: "0.3.1"
+  version: "0.3.2"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: cffd62024d8f5a7f742b0c191a44c967a479f936ddb12934abd69c0cf624e136
+  sha256: 3bf3fc709b53134fd8b7c2db378d28b5033919e17b106b115c1210315d2ce5d7
 
 build:
   number: 0
