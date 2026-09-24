@@ -1,17 +1,17 @@
 context:
   name: colcon-notification
-  version: "0.3.2"
+  version: "0.3.3"
 
 package:
-  name: ${{ name|lower }}
+  name: colcon-notification
   version: ${{ version }}
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 3bf3fc709b53134fd8b7c2db378d28b5033919e17b106b115c1210315d2ce5d7
+  sha256: a97cf4f9cf9ad60a78c3576ea633e50f7c9caae1d4aef57e55bdbb40d21151e0
 
 build:
-  number: 1
+  number: 0
   script: ${{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -25,7 +25,7 @@ requirements:
     - python
     - setuptools
   run:
-    - colcon-core >=0.3.7
+    - colcon-core >=0.21.3
     - if: linux
       then: notify2
     - python
